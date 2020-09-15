@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: rjnay_com
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+  web:
+    image: rjnay_com
+    restart: always
+    build: ./web/
+    depends_on:
+      - db
+    ports:
+      - 8000:8000
+    volumes:
+      - ./web/:/app/
+    command: python manage.py runserver 0.0.0.0:8000
+
+volumes:
+  pg_data: {}
