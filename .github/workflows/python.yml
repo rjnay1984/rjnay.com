@@ -64,5 +64,5 @@ jobs:
         PG_USER: postgres
         PG_PASSWORD: postgres
       run: |
-        python manage.py test
+        python manage.py test home
       working-directory: ./web
