@@ -11,4 +11,4 @@ class HomePageTests(TestCase):
         """
         body = 'Hello World!'
         home_page = HomePage(body=body)
-        self.assertEqual(home_page.body, body)
+        self.assertEqual(home_page.body, 'sup')
