@@ -24,6 +24,11 @@ services:
       - db
     ports:
       - 8000:8000
+    environment:
+      PG_HOST: 'db'
+      PG_DATABASE: 'rjnay_com'
+      PG_USER: 'postgres'
+      PG_PASSWORD: 'postgres'
     volumes:
       - ./web/:/app/
     command: python manage.py runserver 0.0.0.0:8000
