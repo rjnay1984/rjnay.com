@@ -56,6 +56,11 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       working-directory: ./web
     - name: Run Tests
+      env:
+        PG_HOST: localhost
+        PG_DATABASE: rjnay_com
+        PG_USER: postgres
+        PG_PASSWORD: postgres
       run: |
         python manage.py test
       working-directory: ./web
