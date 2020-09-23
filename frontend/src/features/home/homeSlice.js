@@ -21,6 +21,7 @@ const homeSlice = createSlice({
 
     getHomePageFailure: state => {
       state.hasErrors = true
+      state.loading = false
     },
   }
 })

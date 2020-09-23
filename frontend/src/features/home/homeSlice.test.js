@@ -1,6 +1,6 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import reducer, { initialState, fetchHomePage, getHomePage, getHomePageSuccess, getHomePageFailure } from './homeSlice';
+import reducer, { initialState, fetchHomeContent, getHomePage, getHomePageSuccess, getHomePageFailure } from './homeSlice';
 
 const mockStore = configureMockStore([thunk]);
 
@@ -17,7 +17,7 @@ describe('home slice', () => {
       expect(result).toEqual(nextState);
     });
 
-    it('should return the loading and error state', () => {
+    it('should return the loading state', () => {
       // Arrange
 
       // Act
@@ -31,7 +31,23 @@ describe('home slice', () => {
           content: {},
           hasErrors: false,
         }
-      })
-    })
+      });
+    });
+
+    it('should return the error state', () => {
+      // Arrange
+
+      // Act
+      const nextState = reducer(initialState, getHomePageFailure());
+      // Assert
+      const rootState = { homeContent: nextState }
+      expect(rootState).toEqual({
+        homeContent: {
+          loading: false,
+          content: {},
+          hasErrors: true,
+        }
+      });
+    });
   })
 });
