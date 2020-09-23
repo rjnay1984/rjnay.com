@@ -1,12 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+export const initialState = {
+  loading: false,
+  content: {},
+  hasErrors: false,
+}
+
 const homeSlice = createSlice({
   name: 'home',
-  initialState: {
-    loading: false,
-    content: {},
-    hasErrors: false,
-  },
+  initialState,
   reducers: {
     getHomePage: state => {
       state.loading = true
