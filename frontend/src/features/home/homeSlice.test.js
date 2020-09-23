@@ -39,6 +39,7 @@ describe('home slice', () => {
 
       // Act
       const nextState = reducer(initialState, getHomePageFailure());
+      
       // Assert
       const rootState = { homeContent: nextState }
       expect(rootState).toEqual({
@@ -46,6 +47,24 @@ describe('home slice', () => {
           loading: false,
           content: {},
           hasErrors: true,
+        }
+      });
+    });
+
+    it('should fetch home page content', () => {
+      // Arrange
+      const payload = { content: '<p>Home page content</p>' };
+
+      // Act
+      const nextState = reducer(initialState, getHomePageSuccess(payload));
+
+      // Assert
+      const rootState = { homeContent: nextState };
+      expect(rootState).toEqual({
+        homeContent: {
+          loading: false,
+          content: payload,
+          hasErrors: false,
         }
       });
     });
