@@ -15,6 +15,23 @@ describe('home slice', () => {
 
       // Assert
       expect(result).toEqual(nextState);
+    });
+
+    it('should return the loading and error state', () => {
+      // Arrange
+
+      // Act
+      const nextState = reducer(initialState, getHomePage());
+
+      // Assert
+      const rootState = { homeContent: nextState };
+      expect(rootState).toEqual({
+        homeContent: {
+          loading: true,
+          content: {},
+          hasErrors: false,
+        }
+      })
     })
   })
 });
