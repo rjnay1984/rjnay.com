@@ -1,8 +1,6 @@
 import thunk from 'redux-thunk';
 import reducer, { initialState, fetchHomeContent, getHomePage, getHomePageSuccess, getHomePageFailure } from './homeSlice';
 
-const mockStore = configureMockStore([thunk]);
-
 describe('home slice', () => {
   describe('reducer, action creators, and selectors', () => {
     it('should return the initial state on first run', () => {
