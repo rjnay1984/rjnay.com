@@ -38,7 +38,7 @@ export function fetchHomeContent() {
     dispatch(getHomePage())
 
     try {
-      const response = await fetch('http://localhost:8000/api/v2/pagess/3/');
+      const response = await fetch('http://localhost:8000/api/v2/pages/3/');
       const data = await response.json();
 
       dispatch(getHomePageSuccess(data))
