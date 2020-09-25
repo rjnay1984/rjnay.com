@@ -17,7 +17,7 @@ services:
       - 8080:8080
 
   web:
-    image: rjnay_com
+    image: rjnay_com_api
     restart: always
     build: ./web/
     depends_on:
@@ -33,8 +33,8 @@ services:
       - ./web/:/app/
     command: python manage.py runserver 0.0.0.0:8000
 
-  node:
-    container_name: node
+  frontend:
+    image: rjnay_com_frontend
     build:
       context: ./frontend
       dockerfile: Dockerfile
@@ -43,7 +43,7 @@ services:
       - './frontend:/app'
       - '/app/node_modules'
     ports:
-      - 3001:3000
+      - 3000:3000
     environment:
       - CHOKIDAR_USEPOLLING=true   
 
