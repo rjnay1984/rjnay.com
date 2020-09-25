@@ -46,7 +46,7 @@ describe('Home Component', () => {
       </Provider>
     )
 
-    expect(getByText('Home page content')).toBeInTheDocument();
+    expect(getByText('fail test')).toBeInTheDocument();
   })
 
   it('has errors', () => {

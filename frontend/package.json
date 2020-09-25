@@ -17,7 +17,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "ci": "CI=true npm run ci",
+    "ci": "CI=true npm run test",
     "eject": "react-scripts eject",
     "eslint": "./node_modules/.bin/eslint ./src/features/**/*.js"
   },
