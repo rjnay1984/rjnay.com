@@ -18,7 +18,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "ci": "CI=true npm run ci",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "eslint": "./node_modules/.bin/eslint ./src/features/**/*.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,5 +44,6 @@
       "!src/serviceWorker.js",
       "!src/index.js"
     ]
-  }
+  },
+  "proxy": "http://web:8000"
 }
