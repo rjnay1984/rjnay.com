@@ -28,3 +28,5 @@ class SinglePage(Page):
     api_fields = [
         APIField('body')
     ]
+
+    subpage_types = ['single.SinglePage']
