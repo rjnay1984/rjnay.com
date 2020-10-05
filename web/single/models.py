@@ -6,7 +6,7 @@ from wagtail.images.blocks import ImageChooserBlock
 from wagtail.api import APIField
 
 
-class Single(Page):
+class SinglePage(Page):
     """
     This is the model for a basic single page
     template with a PageBuilder/StreamField.
