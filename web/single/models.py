@@ -11,10 +11,11 @@ class SinglePage(Page):
     This is the model for a basic single page
     template with a PageBuilder/StreamField.
     """
-    body = StreamField([
-        ('heading', blocks.CharBlock(classname="full title")),
-        ('paragraph', blocks.RichTextBlock()),
-        ('image', ImageChooserBlock()),
+    body = StreamField(
+        [
+            ('heading', blocks.CharBlock(classname="full title")),
+            ('paragraph', blocks.RichTextBlock()),
+            ('image', ImageChooserBlock()),
         ],
         null=True,
         blank=True,

@@ -2,6 +2,7 @@ from wagtail.tests.utils import WagtailPageTests
 from .models import SinglePage
 from home.models import HomePage
 
+
 # Create your tests here.
 class SinglePageTests(WagtailPageTests):
 
