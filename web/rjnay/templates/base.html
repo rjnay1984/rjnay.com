@@ -33,10 +33,21 @@
 
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
+        {% include '_navbar.html' %}
 
-        {% block content %}{% endblock %}
+        <main>
+            {% block content %}{% endblock %}        
+        </main>
 
-        {# Bootstrap Js #}
+        <footer class="footer bg-light">
+            {% block footer %}
+                <div class="container text-center py-3">
+                    &copy;{% now "Y" %} RJ Nay.                
+                </div>
+            {% endblock %}
+        </footer>
+
+       {# Bootstrap Js #}
         <script
             src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
