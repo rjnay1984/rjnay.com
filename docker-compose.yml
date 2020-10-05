@@ -16,7 +16,7 @@ services:
     ports:
       - 8080:8080
 
-  web:
+  api:
     image: api
     restart: always
     build: ./web/
