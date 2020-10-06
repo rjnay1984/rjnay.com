@@ -17,7 +17,7 @@ services:
       - 8080:8080
 
   web:
-    image: api
+    image: web
     restart: always
     build: ./web/
     depends_on:
@@ -35,9 +35,7 @@ services:
 
   frontend:
     image: frontend
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
+    build: ./frontend/
     stdin_open: true
     volumes:
       - './frontend:/app'

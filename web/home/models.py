@@ -14,3 +14,5 @@ class HomePage(Page):
     api_fields = [
         APIField('body')
     ]
+
+    subpage_types = ['single.SinglePage']

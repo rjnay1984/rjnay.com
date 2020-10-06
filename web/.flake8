@@ -4,5 +4,6 @@ exclude =
     .git,
     __pycache__,
     settings,
-    migrations
+    migrations,
+    env
 max-complexity = 10
