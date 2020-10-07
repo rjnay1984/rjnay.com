@@ -1,0 +1,347 @@
+[
+  {
+    "model": "wagtailcore.site",
+    "pk": 2,
+    "fields": {
+      "hostname": "localhost",
+      "port": 8000,
+      "site_name": "RJ Nay | Software Developer",
+      "root_page": 3,
+      "is_default_site": true
+    }
+  },
+  {
+    "model": "wagtailcore.collection",
+    "pk": 1,
+    "fields": {
+      "path": "0001",
+      "depth": 1,
+      "numchild": 0,
+      "name": "Root"
+    }
+  },
+  {
+    "model": "wagtailcore.workflowpage",
+    "pk": 1,
+    "fields": {
+      "workflow": 1
+    }
+  },
+  {
+    "model": "wagtailcore.workflowtask",
+    "pk": 1,
+    "fields": {
+      "sort_order": 0,
+      "workflow": 1,
+      "task": 1
+    }
+  },
+  {
+    "model": "wagtailcore.task",
+    "pk": 1,
+    "fields": {
+      "name": "Moderators approval",
+      "content_type": [
+        "wagtailcore",
+        "groupapprovaltask"
+      ],
+      "active": true
+    }
+  },
+  {
+    "model": "wagtailcore.workflow",
+    "pk": 1,
+    "fields": {
+      "name": "Moderators approval",
+      "active": true
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 1,
+    "fields": {
+      "name": "Moderators",
+      "permissions": [
+        [
+          "access_admin",
+          "wagtailadmin",
+          "admin"
+        ],
+        [
+          "add_document",
+          "wagtaildocs",
+          "document"
+        ],
+        [
+          "change_document",
+          "wagtaildocs",
+          "document"
+        ],
+        [
+          "delete_document",
+          "wagtaildocs",
+          "document"
+        ],
+        [
+          "add_image",
+          "wagtailimages",
+          "image"
+        ],
+        [
+          "change_image",
+          "wagtailimages",
+          "image"
+        ],
+        [
+          "delete_image",
+          "wagtailimages",
+          "image"
+        ]
+      ]
+    }
+  },
+  {
+    "model": "auth.group",
+    "pk": 2,
+    "fields": {
+      "name": "Editors",
+      "permissions": [
+        [
+          "access_admin",
+          "wagtailadmin",
+          "admin"
+        ],
+        [
+          "add_document",
+          "wagtaildocs",
+          "document"
+        ],
+        [
+          "change_document",
+          "wagtaildocs",
+          "document"
+        ],
+        [
+          "delete_document",
+          "wagtaildocs",
+          "document"
+        ],
+        [
+          "add_image",
+          "wagtailimages",
+          "image"
+        ],
+        [
+          "change_image",
+          "wagtailimages",
+          "image"
+        ],
+        [
+          "delete_image",
+          "wagtailimages",
+          "image"
+        ]
+      ]
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$216000$DKH0ZzaVVCg3$hQuGaHznkNkJZ100jKiL4yT5XjzFItwaaOe1pKnuVKQ=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "Admin",
+      "last_name": "User",
+      "email": "admin@email.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-10-07T19:50:26.457Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 1,
+    "fields": {
+      "content_type": [
+        "single",
+        "singlepage"
+      ],
+      "label": "About",
+      "action": "wagtail.create",
+      "data_json": "\"\"",
+      "timestamp": "2020-10-07T18:40:04.214Z",
+      "user": [
+        "admin"
+      ],
+      "content_changed": true,
+      "deleted": false,
+      "page": 4,
+      "revision": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 2,
+    "fields": {
+      "content_type": [
+        "single",
+        "singlepage"
+      ],
+      "label": "About",
+      "action": "wagtail.publish",
+      "data_json": "null",
+      "timestamp": "2020-10-07T18:40:04.254Z",
+      "user": [
+        "admin"
+      ],
+      "content_changed": true,
+      "deleted": false,
+      "page": 4,
+      "revision": 1
+    }
+  },
+  {
+    "model": "wagtailcore.groupapprovaltask",
+    "pk": 1,
+    "fields": {
+      "groups": [
+        [
+          "Moderators"
+        ]
+      ]
+    }
+  },
+  {
+    "model": "wagtailcore.pagerevision",
+    "pk": 1,
+    "fields": {
+      "page": 4,
+      "submitted_for_moderation": false,
+      "created_at": "2020-10-07T18:40:04.223Z",
+      "user": [
+        "admin"
+      ],
+      "content_json": "{\"pk\": 4, \"path\": \"000100010001\", \"depth\": 3, \"numchild\": 0, \"title\": \"About\", \"draft_title\": \"About\", \"slug\": \"about\", \"content_type\": 7, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/about/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"body\": \"[{\\\"type\\\": \\\"heading\\\", \\\"value\\\": \\\"About Me\\\", \\\"id\\\": \\\"e7e8ae3f-f6df-465a-ad2f-47a7b2b5c795\\\"}, {\\\"type\\\": \\\"paragraph\\\", \\\"value\\\": \\\"<p>This is my about page.</p>\\\", \\\"id\\\": \\\"ca6ae804-906a-4b7f-9bde-996ddcaad434\\\"}]\"}",
+      "approved_go_live_at": null
+    }
+  },
+  {
+    "model": "wagtailcore.page",
+    "pk": 1,
+    "fields": {
+      "path": "0001",
+      "depth": 1,
+      "numchild": 1,
+      "title": "Root",
+      "draft_title": "Root",
+      "slug": "root",
+      "content_type": [
+        "wagtailcore",
+        "page"
+      ],
+      "live": true,
+      "has_unpublished_changes": false,
+      "url_path": "/",
+      "owner": null,
+      "seo_title": "",
+      "show_in_menus": false,
+      "search_description": "",
+      "go_live_at": null,
+      "expire_at": null,
+      "expired": false,
+      "locked": false,
+      "locked_at": null,
+      "locked_by": null,
+      "first_published_at": null,
+      "last_published_at": null,
+      "latest_revision_created_at": null,
+      "live_revision": null
+    }
+  },
+  {
+    "model": "wagtailcore.page",
+    "pk": 3,
+    "fields": {
+      "path": "00010001",
+      "depth": 2,
+      "numchild": 1,
+      "title": "Home",
+      "draft_title": "Home",
+      "slug": "home",
+      "content_type": [
+        "home",
+        "homepage"
+      ],
+      "live": true,
+      "has_unpublished_changes": false,
+      "url_path": "/home/",
+      "owner": null,
+      "seo_title": "Home",
+      "show_in_menus": true,
+      "search_description": "This is the home page.",
+      "go_live_at": null,
+      "expire_at": null,
+      "expired": false,
+      "locked": false,
+      "locked_at": null,
+      "locked_by": null,
+      "first_published_at": null,
+      "last_published_at": null,
+      "latest_revision_created_at": null,
+      "live_revision": null
+    }
+  },
+  {
+    "model": "wagtailcore.page",
+    "pk": 4,
+    "fields": {
+      "path": "000100010001",
+      "depth": 3,
+      "numchild": 0,
+      "title": "About",
+      "draft_title": "About",
+      "slug": "about",
+      "content_type": [
+        "single",
+        "singlepage"
+      ],
+      "live": true,
+      "has_unpublished_changes": false,
+      "url_path": "/home/about/",
+      "owner": [
+        "admin"
+      ],
+      "seo_title": "About",
+      "show_in_menus": true,
+      "search_description": "This is the about page.",
+      "go_live_at": null,
+      "expire_at": null,
+      "expired": false,
+      "locked": false,
+      "locked_at": null,
+      "locked_by": null,
+      "first_published_at": "2020-10-07T18:40:04.238Z",
+      "last_published_at": "2020-10-07T18:40:04.238Z",
+      "latest_revision_created_at": "2020-10-07T18:40:04.223Z",
+      "live_revision": 1
+    }
+  },
+  {
+    "model": "single.singlepage",
+    "pk": 4,
+    "fields": {
+      "body": "[{\"type\": \"heading\", \"value\": \"About Me\", \"id\": \"e7e8ae3f-f6df-465a-ad2f-47a7b2b5c795\"}, {\"type\": \"paragraph\", \"value\": \"<p>This is my about page.</p>\", \"id\": \"ca6ae804-906a-4b7f-9bde-996ddcaad434\"}]"
+    }
+  },
+  {
+    "model": "home.homepage",
+    "pk": 3,
+    "fields": {
+      "body": "<p><strong>Hi!</strong>, I'm RJ and I like writing code for funsies (and money).</p>"
+    }
+  }
+]
