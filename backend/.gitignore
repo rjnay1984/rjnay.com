@@ -131,4 +131,4 @@ dmypy.json
 # Wagtail related
 media/
 
-static/
+./static/

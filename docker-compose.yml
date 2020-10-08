@@ -16,10 +16,10 @@ services:
     ports:
       - 8080:8080
 
-  web:
-    image: web
+  backend:
+    image: backend
     restart: always
-    build: ./web/
+    build: ./backend/
     depends_on:
       - db
     ports:
@@ -30,7 +30,7 @@ services:
       PG_USER: 'postgres'
       PG_PASSWORD: 'postgres'
     volumes:
-      - ./web/:/app/
+      - ./backend/:/app/
     command: python manage.py runserver 0.0.0.0:8000
 
   frontend:
