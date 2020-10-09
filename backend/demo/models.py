@@ -9,3 +9,5 @@ class DemoIndexPage(Page):
     content_panels = Page.content_panels + [
         FieldPanel('intro', classname="full")
     ]
+
+    subpage_types = []

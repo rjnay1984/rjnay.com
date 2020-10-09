@@ -6,6 +6,7 @@ from wagtail.tests.utils.form_data import \
 
 from .models import HomePage
 from single.models import SinglePage
+from demo.models import DemoIndexPage
 
 
 class HomePageTests(WagtailPageTests):
@@ -25,4 +26,4 @@ class HomePageTests(WagtailPageTests):
         """
         Test the subpages that can be created.
         """
-        self.assertAllowedSubpageTypes(HomePage, {SinglePage})
+        self.assertAllowedSubpageTypes(HomePage, {SinglePage, DemoIndexPage})
