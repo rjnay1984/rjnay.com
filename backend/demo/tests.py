@@ -3,7 +3,8 @@ from wagtail.tests.utils.form_data import nested_form_data, rich_text
 from wagtail.core.models import Page
 
 from home.models import HomePage
-from demo.models import DemoIndexPage
+from demo.models import DemoIndexPage, DemoPage
+
 
 # Create your tests here.
 class DemoTests(WagtailPageTests):
@@ -27,3 +28,12 @@ class DemoTests(WagtailPageTests):
         self.assertAllowedParentPageTypes(
             DemoIndexPage,
             {Page, HomePage})
+
+    def test_can_create_a_demo_page(self):
+        """
+        I can create a demo page under
+        the demo index page.
+        """
+        self.assertAllowedParentPageTypes(
+            DemoPage,
+            {Page, DemoIndexPage})
