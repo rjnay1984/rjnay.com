@@ -1,0 +1,102 @@
+[
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 7,
+    "fields": {
+      "content_type": [
+        "demo",
+        "demopage"
+      ],
+      "label": "Demo Example",
+      "action": "wagtail.create",
+      "data_json": "\"\"",
+      "timestamp": "2020-10-15T18:38:05.913Z",
+      "user": [
+        "admin"
+      ],
+      "content_changed": true,
+      "deleted": false,
+      "page": 6,
+      "revision": null
+    }
+  },
+  {
+    "model": "wagtailcore.pagelogentry",
+    "pk": 8,
+    "fields": {
+      "content_type": [
+        "demo",
+        "demopage"
+      ],
+      "label": "Demo Example",
+      "action": "wagtail.publish",
+      "data_json": "null",
+      "timestamp": "2020-10-15T18:38:05.955Z",
+      "user": [
+        "admin"
+      ],
+      "content_changed": true,
+      "deleted": false,
+      "page": 6,
+      "revision": 4
+    }
+  },
+  {
+    "model": "wagtailcore.pagerevision",
+    "pk": 4,
+    "fields": {
+      "page": 6,
+      "submitted_for_moderation": false,
+      "created_at": "2020-10-15T18:38:05.924Z",
+      "user": [
+        "admin"
+      ],
+      "content_json": "{\"pk\": 6, \"path\": \"0001000100020001\", \"depth\": 4, \"numchild\": 0, \"title\": \"Demo Example\", \"draft_title\": \"Demo Example\", \"slug\": \"demo-example\", \"content_type\": 9, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/demos/demo-example/\", \"owner\": 1, \"seo_title\": \"Demo Example\", \"show_in_menus\": true, \"search_description\": \"This is the demo example page.\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"teaser\": \"<p>Here is a demo example.</p>\", \"link\": \"https://localhost:8000\", \"body\": \"<p>This is a demo I created.</p>\"}",
+      "approved_go_live_at": null
+    }
+  },
+  {
+    "model": "wagtailcore.page",
+    "pk": 6,
+    "fields": {
+      "path": "0001000100020001",
+      "depth": 4,
+      "numchild": 0,
+      "title": "Demo Example",
+      "draft_title": "Demo Example",
+      "slug": "demo-example",
+      "content_type": [
+        "demo",
+        "demopage"
+      ],
+      "live": true,
+      "has_unpublished_changes": false,
+      "url_path": "/home/demos/demo-example/",
+      "owner": [
+        "admin"
+      ],
+      "seo_title": "Demo Example",
+      "show_in_menus": true,
+      "search_description": "This is the demo example page.",
+      "go_live_at": null,
+      "expire_at": null,
+      "expired": false,
+      "locked": false,
+      "locked_at": null,
+      "locked_by": null,
+      "first_published_at": "2020-10-15T18:38:05.939Z",
+      "last_published_at": "2020-10-15T18:38:05.939Z",
+      "latest_revision_created_at": "2020-10-15T18:38:05.924Z",
+      "live_revision": 4
+    }
+  },
+  {
+    "model": "demo.demopage",
+    "pk": 6,
+    "fields": {
+      "teaser": "<p>Here is a demo example.</p>",
+      "link": "https://localhost:8000",
+      "body": "<p>This is a demo I created.</p>"
+    }
+  }
+]
