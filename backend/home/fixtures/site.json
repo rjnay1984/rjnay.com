@@ -1,0 +1,31 @@
+[
+  {
+    "model": "wagtailcore.site",
+    "pk": 2,
+    "fields": {
+      "hostname": "localhost",
+      "port": 8000,
+      "site_name": "RJ Nay | Software Developer",
+      "root_page": 3,
+      "is_default_site": true
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$216000$isD1vMTuN0fa$OG4/f2YJroBHeu1kz6SpE0FfkjiWGxf7okENYEmH5Mw=",
+      "last_login": "2020-10-15T14:31:03.147Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "Admin",
+      "last_name": "User",
+      "email": "admin@test.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2020-10-15T14:30:52.137Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
